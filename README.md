@@ -64,3 +64,17 @@
 
    
 NOTE:- Installation steps are for Ubuntu OS.
+
+You can run below  curl command for testing. 
+
+curl -X GET http://localhost:8000/api/profiles/
+  
+curl -X GET http://localhost:8000/api/profiles/3/
+
+curl -H 'Content-Type: application/json' -d ' { "first_name": "Tom", "last_name": "Smith", "email": "tom.smith@example.com", "age": 30 }' -X PUT http://localhost:8000/api/profiles/
+
+curl -H 'Content-Type: application/json' -d ' { "first_name": "Tom", "last_name": "Smith", "email": "tom.smith@example.com", "age": 31 }' -X POST http://localhost:8000/api/profiles/1/
+
+curl -X DELETE http://localhost:8000/api/profiles/3/
+
+curl -X GET http://localhost:8000/api/profiles/
